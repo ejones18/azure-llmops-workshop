@@ -95,6 +95,7 @@ Done! The Content Safety service is now created.
 
 ![LLMOps Workshop](images/08.04.2024_14.58.21_REC.png)
 
+**Note** - As per the documentation [here](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/response-codes#azure-ai-studio-error-messages), an additional RBAC role may be required if you see the error `Your account does not have access to this resource, please contact your resource owner to get access` error.
 
 #### Lab Steps
 
