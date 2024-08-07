@@ -8,7 +8,7 @@ The content of this workshop is broken down into 5 individual labs that build up
 
 | Lab title     | Lab description      | Lab link  |
 | ------------- | -------------------- | --------- |
-| AI Studio exploration and set-up | This lab will look at deploying the services needed for the AI Studio before exploring some of the key functionalities found within. | [Link](./labs/lesson_01_studio_exploration/lab01.md) |
+| AI Studio exploration and setup | This lab will look at deploying the services needed for the AI Studio before exploring some of the key functionalities found within. | [Link](./labs/lesson_01_studio_exploration/lab01.md) |
 | Orchestration flows in PromptFlow | This lab will look at creating two different types of orchestration flows to help cement your understanding on how to use PromptFlow. | [Link](./labs/lesson_02_orchestration_flows/lab02.md) |
 | Evaulating and deploying flows | This lab will look at how to evaluate an orchestration flow before looking at the steps to deploy it. | [Link](./labs/lesson_03_evaluation_and_deployment/lab03.md) |
 | Monitoring deployed flows | This lab will look at the ways we can monitor deployed flows. | [Link](./labs/lesson_04_endpoint_monitoring/lab04.md) |
