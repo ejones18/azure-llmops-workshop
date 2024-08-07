@@ -1,0 +1,56 @@
+{
+    "azure_managed_endpoint":[
+        {
+            "ENV_NAME": "dev",
+            "TEST_FILE_PATH": "sample-request.json",
+            "ENDPOINT_NAME": "llmops-test-ej123",
+            "ENDPOINT_DESC": "An online endpoint serving a flow for named entity flow",
+            "DEPLOYMENT_DESC": "prompt flow deployment",
+            "PRIOR_DEPLOYMENT_NAME": "",
+            "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
+            "CURRENT_DEPLOYMENT_NAME": "llmops-ej-deployment",
+            "CURRENT_DEPLOYMENT_TRAFFIC_ALLOCATION": "100",
+            "DEPLOYMENT_VM_SIZE": "Standard_F4s_v2",
+            "DEPLOYMENT_INSTANCE_COUNT": 1,
+            "ENVIRONMENT_VARIABLES": {
+                "example-name": "example-value"
+            }
+        }
+    ],
+    "kubernetes_endpoint":[
+        {
+            "ENV_NAME": "dev",
+            "TEST_FILE_PATH": "sample-request.json",
+            "ENDPOINT_NAME": "",
+            "ENDPOINT_DESC": "An kubernetes endpoint serving a flow for named entity",
+            "DEPLOYMENT_DESC": "prompt flow deployment",
+            "PRIOR_DEPLOYMENT_NAME": "",
+            "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
+            "CURRENT_DEPLOYMENT_NAME": "",
+            "CURRENT_DEPLOYMENT_TRAFFIC_ALLOCATION": 100,
+            "COMPUTE_NAME": "",
+            "DEPLOYMENT_VM_SIZE": "",
+            "DEPLOYMENT_INSTANCE_COUNT": 1,
+            "CPU_ALLOCATION": "",
+            "MEMORY_ALLOCATION": "",
+            "ENVIRONMENT_VARIABLES": {
+                "example-name": "example-value"
+            }
+        }
+    ],
+    "webapp_endpoint":[
+        {
+            "ENV_NAME": "dev",
+            "TEST_FILE_PATH": "sample-request.json",
+            "CONNECTION_NAMES": ["aoai"],
+            "REGISTRY_NAME": "029e7055146c4f8dbf3c8231ba4cc099",
+            "REGISTRY_RG_NAME": "ej-llmops",
+            "APP_PLAN_NAME": "llmops-app-service-plan",
+            "WEB_APP_NAME": "NER-webapp-llmops",
+            "WEB_APP_RG_NAME": "NER-app-rg-llmops",
+            "WEB_APP_SKU": "B3",
+            "USER_MANAGED_ID": "test-llmops-managed-id"
+            
+        }
+    ]
+}
