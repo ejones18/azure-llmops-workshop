@@ -16,7 +16,7 @@ The focus will be on building out two example pipelines that test an orchestrati
 - An Azure AI Hub, within which there is an AI project - the project will need the `Reader` RBAC role over the Hub's associated storage account. As well as this, the above Azure OpenAI resource should be added as connection to the Hub - the connection should be called `aoai`,
 - An Azure Container Registry resource,
 - A service principle with the owner role at the subscription scope - see [here](https://learn.microsoft.com/en-us/cli/azure/azure-cli-sp-tutorial-1?tabs=bash#create-a-service-principal-with-role-and-scope). Note, the output of this will need to be used later when creating the service connection in Azure DevOps,
-- An Azure DevOps organisation and project. Note that new organisations will need to request a free gran of parallel jobs as per [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/licensing/concurrent-jobs?view=azure-devops&tabs=ms-hosted#microsoft-hosted-cicd),
+- An Azure DevOps organisation and project. Note that new organisations will need to request a free grant of parallel jobs as per [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/licensing/concurrent-jobs?view=azure-devops&tabs=ms-hosted#microsoft-hosted-cicd),
 - VS Code and Git installed locally.
 
 #### Setup
@@ -123,3 +123,33 @@ From your Azure DevOps project, select `Repos -> Branches -> more options button
 More details about how to create a policy can be found [here](https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser).
 
 #### Lab Steps
+
+1. Setup local development environment.
+
+First off, we need to clone the Azure DevOps repository that now contains all the template code onto our local machine. As described in the prerequisites, we will need Git installed and VS Code (as our IDE of choice). After this, we will create a new feature branch for our 'changes' - to do this programmatically, `git checkout -b <branch_name_here>`.
+
+2. Updating the configuration files.
+
+The following files will need to be updated...
+
+* [Web app deployment configuration file](./named_entity_recognition/configs/deployment_config.json), within which the following properties should be updated:
+    - `REGISTRY_NAME`: This is the name of the Container Registry that is available in the `DOCKER_IMAGE_REGISTRY` variable in `llmops_platform_dev_vg` variable group. Based on this name, appropriate registry details will be used for `Docker` image management.
+    - `REGISTRY_RG_NAME`: This is the name of the resource group related to the Container Registry. It is used for downloading the Docker Image.
+    - `APP_PLAN_NAME`: Name of the App Services plan. It will be provisioned by the pipeline.
+    - `WEB_APP_NAME`: Name of the Web App. It will be provisioned by the pipeline.
+    - `WEB_APP_RG_NAME`:  Name of the resource group related to App Service plan and Web App. It will be provisioned by the pipeline.
+    - `WEB_APP_SKU`: This is the `SKU` (size) of the Web App. e.g. "B3"
+    - `USER_MANAGED_ID`: This is the name of the user defined managed id created during deployment associated with the Web App.
+
+* [The experiment definition YAML file](./named_entity_recognition/experiment.yaml), within which the following needs to be updated:
+    - `api_base`: This should be the endpoint point of the AOAI service we have been referencing throughout the setup i.e. the AOAI service that is connected to our AI hub.
+
+3. Publish and push the new feature branch
+
+4. Create a PR from the feature branch into the development branch.
+
+This will trigger the first pipeline.
+
+5. Approve the PR.
+
+This will trigger the second pipeline - be wary that one of the steps is a manual approval for the deployment of the web application. The output of this pipeline will be a new resource group containing the newly deployed web application... et viola!
