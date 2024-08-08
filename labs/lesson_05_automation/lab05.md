@@ -39,7 +39,7 @@ Create a new variable group `llmops_platform_dev_vg` ([follow the documentation]
 - **rg_name**: Name of the resource group containing the Azure AI Hub,
 - **ws_name**: Name of the Azure AI Project,
 - **kv_name**: Name of the Key Vault associated with the Azure AI Hub.
-- **DOCKER_IMAGE_REGISTRY**: A JSON object cotaning the following information:
+- **DOCKER_IMAGE_REGISTRY**: A JSON object containing the following information:
 
 ```json
 [
