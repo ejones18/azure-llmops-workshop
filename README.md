@@ -2,11 +2,17 @@
 
 Welcome to the LLMOps workshop! This course will guide you through building, evaluating, monitoring, and deploying Large Language Model solutions efficiently using Azure AI, Azure Machine Learning Prompt Flow, Content Safety, and Azure OpenAI. Let's master LLMOps together!
 
+## Workshop content
 
-- [Workshop contents](https://microsoft.github.io/llmops-workshop/)
-- [Change log](CHANGELOG.md)
+The content of this workshop is broken down into 5 individual labs that build upon the last, the structure is as follows:
 
-
+| Lab title     | Lab description      | Lab link  |
+| ------------- | -------------------- | --------- |
+| AI Studio exploration and setup | This lab will look at deploying the services needed for the AI Studio before exploring some of the key functionalities found within. | [Link](./labs/lesson_01_studio_exploration/lab01.md) |
+| Orchestration flows in PromptFlow | This lab will look at creating two different types of orchestration flows to help cement your understanding on how to use PromptFlow. | [Link](./labs/lesson_02_orchestration_flows/lab02.md) |
+| Evaulating and deploying flows | This lab will look at how to evaluate an orchestration flow before looking at the steps to deploy it. | [Link](./labs/lesson_03_evaluation_and_deployment/lab03.md) |
+| Monitoring deployed flows | This lab will look at the ways we can monitor deployed flows. | [Link](./labs/lesson_04_endpoint_monitoring/lab04.md) |
+| Automating everything: LLMOps | This lab will look at taking all the concepts covered in the previous labs, and incorporate them into an example LLMOps workflow using Azure DevOps to automate the process. | [Link](./labs/lesson_05_automation/lab05.md) |
 
 ## Contributing
 
