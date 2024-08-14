@@ -31,16 +31,16 @@ from labs.lesson_05_automation.llmops.common.common import (
     FlowTypeOption,
     ClientObjectWrapper as ObjectWrapper
 )
-from llmops.common.common import (
+from labs.lesson_05_automation.llmops.common.common import (
     resolve_run_ids,
     resolve_flow_type,
     resolve_env_vars
 )
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
-from llmops.common.logger import llmops_logger
-from llmops.common.create_connections import create_pf_connections
-from llmops.config import EXECUTION_TYPE
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.create_connections import create_pf_connections
+from labs.lesson_05_automation.llmops.config import EXECUTION_TYPE
 from promptflow.client import PFClient as PFClientLocal
 from promptflow.azure import PFClient as PFClientAzure
 from promptflow._sdk.entities import Run
