@@ -64,7 +64,7 @@ from labs.lesson_05_automation.llmops.common.experiment_cloud_config import Expe
 from labs.lesson_05_automation.llmops.common.experiment import load_experiment
 from labs.lesson_05_automation.llmops.common.logger import llmops_logger
 from labs.lesson_05_automation.llmops.common.create_connections import create_pf_connections
-from llmops.common.common import FlowTypeOption
+from labs.lesson_05_automation.llmops.common.common import FlowTypeOption
 from labs.lesson_05_automation.llmops.config import EXECUTION_TYPE
 from promptflow.client import PFClient as PFClientLocal
 from promptflow.azure import PFClient as PFClientAzure
