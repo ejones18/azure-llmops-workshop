@@ -24,10 +24,10 @@ from azure.identity import DefaultAzureCredential
 from dotenv import load_dotenv
 from typing import Optional
 
-from llmops.common.logger import llmops_logger
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
-from llmops.common.common import resolve_flow_type
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.common import resolve_flow_type
 
 
 logger = llmops_logger("register_flow")

@@ -40,15 +40,15 @@ from azure.ai.ml.entities._deployment.resource_requirements_settings import (
 from azure.ai.ml.entities._deployment.container_resource_settings import (
     ResourceSettings,
 )
-from llmops.common.common import REQUEST_TIMEOUT_MS
+from labs.lesson_05_automation.llmops.common.common import REQUEST_TIMEOUT_MS
 from dotenv import load_dotenv
 
 
-from llmops.common.logger import llmops_logger
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
-from llmops.common.common import resolve_env_vars
-from llmops.common.common import FlowTypeOption
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.common import resolve_env_vars
+from labs.lesson_05_automation.llmops.common.common import FlowTypeOption
 
 logger = llmops_logger("provision_deployment")
 

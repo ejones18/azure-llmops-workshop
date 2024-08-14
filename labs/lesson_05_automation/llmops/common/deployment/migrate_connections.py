@@ -23,12 +23,12 @@ from pathlib import Path
 from promptflow.client import PFClient
 from typing import Optional
 
-from llmops.common.common import FlowTypeOption
+from labs.lesson_05_automation.llmops.common.common import FlowTypeOption
 from promptflow._sdk.operations._flow_operations import FlowOperations
-from llmops.common.common import resolve_flow_type
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
-from llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.common import resolve_flow_type
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
 
 logger = llmops_logger("prompt_eval")
 

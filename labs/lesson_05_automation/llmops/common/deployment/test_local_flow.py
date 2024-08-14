@@ -11,7 +11,7 @@ import json
 import requests
 import time
 from dotenv import load_dotenv
-from llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
 
 logger = llmops_logger("test local container endpoint")
 
