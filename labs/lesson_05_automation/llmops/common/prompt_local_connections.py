@@ -15,9 +15,9 @@ import argparse
 from dotenv import load_dotenv
 from llmops.common.common import resolve_flow_type
 
-from llmops.common.experiment import load_experiment
-from llmops.common.logger import llmops_logger
-from llmops.common.create_connections import create_pf_connections
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.create_connections import create_pf_connections
 
 
 logger = llmops_logger("prompt_aoai_connection")

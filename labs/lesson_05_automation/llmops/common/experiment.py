@@ -20,7 +20,7 @@ from typing import Any, List, Optional, Tuple, Dict
 
 from azure.ai.ml import MLClient
 
-from llmops.common.common import FlowTypeOption
+from labs.lesson_05_automation.llmops.common.common import FlowTypeOption
 
 _FLOW_DAG_FILENAME = "flow.dag.yaml"
 _FLOW_FLEX_FILENAME = "flow.flex.yaml"

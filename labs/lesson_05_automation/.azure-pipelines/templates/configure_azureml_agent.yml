@@ -19,7 +19,7 @@ steps:
       set -e # fail on error
 
       python -m pip install --upgrade pip
-      python -m pip install -r .azure-pipelines/requirements/execute_job_requirements.txt
+      python -m pip install -r  ./labs/lesson_05_automation/.azure-pipelines/requirements/execute_job_requirements.txt
       #python -m pip install promptflow promptflow-tools promptflow-sdk jinja2 promptflow[azure] openai promptflow-sdk[builtins] PyPDF2 faiss-cpu
 
       process_requirements() {

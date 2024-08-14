@@ -30,7 +30,7 @@ stages:
         steps:
         - template: templates/configure_azureml_agent.yml
           parameters:
-            base_path: ${{ parameters.use_case_base_path }}
+            base_path: ./labs/lesson_05_automation/${{ parameters.use_case_base_path }}
 
         - task: Bash@3
           displayName: Create .env file
@@ -55,7 +55,7 @@ stages:
           parameters:
             step_name: "Register Training Data"
             script_parameter: |
-              python -m llmops.common.register_data_asset \
+              python -m labs.lesson_05_automation.llmops.common.register_data_asset \
                 --subscription_id "$(SUBSCRIPTION_ID)" \
                 --base_path ${{ parameters.use_case_base_path }} \
                 --env_name ${{ parameters.exec_environment }}
@@ -74,7 +74,7 @@ stages:
           parameters:
             step_name: "Execute Standard Flow"
             script_parameter: |
-              python -m llmops.common.prompt_pipeline \
+              python -m labs.lesson_05_automation.llmops.common.prompt_pipeline \
                 --subscription_id "$(SUBSCRIPTION_ID)" \
                 --build_id $(BUILD.BUILDID) \
                 --env_name ${{ parameters.exec_environment }} \
@@ -107,7 +107,7 @@ stages:
           parameters:
             step_name: "Register Test Data"
             script_parameter: |
-              python -m llmops.common.register_data_asset \
+              python -m labs.lesson_05_automation.llmops.common.register_data_asset \
                 --subscription_id "$(SUBSCRIPTION_ID)" \
                 --base_path ${{ parameters.use_case_base_path }} \
                 --env_name ${{ parameters.exec_environment }}
@@ -125,7 +125,7 @@ stages:
           parameters:
             step_name: "Execute Evaluation Flow"
             script_parameter: |
-              python -m llmops.common.prompt_eval \
+              python -m labs.lesson_05_automation.llmops.common.prompt_eval \
                 --subscription_id $(SUBSCRIPTION_ID) \
                 --build_id $(BUILD.BUILDID) \
                 --env_name "${{ parameters.exec_environment }}" \
@@ -214,7 +214,7 @@ stages:
           parameters:
             step_name: "Register Standard Flow"
             script_parameter: |
-              python -m llmops.common.deployment.register_model \
+              python -m labs.lesson_05_automation.llmops.common.deployment.register_model \
                 --subscription_id $(SUBSCRIPTION_ID) \
                 --base_path ${{ parameters.use_case_base_path }} \
                 --output_file "model_version.txt" \

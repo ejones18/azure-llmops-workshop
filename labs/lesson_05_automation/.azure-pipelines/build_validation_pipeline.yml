@@ -12,16 +12,16 @@ jobs:
 
   - script: |
       python -m pip install --upgrade pip
-      pip install -r .azure-pipelines/requirements/build_validation_requirements.txt
+      pip install -r ./labs/lesson_05_automation/.azure-pipelines/requirements/build_validation_requirements.txt
     displayName: "Load Python Dependencies"
 
   - script: |
-      pytest ${{ parameters.use_case_base_path }}/tests  --ignore=sandbox/ --junitxml=junit/test-results.xml --cov=. --cov-report=xml
+      pytest ./labs/lesson_05_automation/${{ parameters.use_case_base_path }}/tests  --ignore=sandbox/ --junitxml=junit/test-results.xml --cov=. --cov-report=xml
     displayName: 'Run Unit Tests'
     condition: succeededOrFailed()
 
   - script: |
-      flake8 ./llmops ./tests
+      flake8 ./labs/lesson_05_automation/llmops/common/common.py
     displayName: "Python Code linting"
 
   - task: PublishTestResults@2

@@ -27,7 +27,7 @@ import importlib
 
 from azure.identity import DefaultAzureCredential
 
-from llmops.common.common import (
+from labs.lesson_05_automation.llmops.common.common import (
     FlowTypeOption,
     ClientObjectWrapper as ObjectWrapper
 )

@@ -16,8 +16,8 @@ from typing import Optional
 from azure.ai.ml import MLClient
 from azure.identity import DefaultAzureCredential
 
-from llmops.common.logger import llmops_logger
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
 
 logger = llmops_logger("get_workspace")
 

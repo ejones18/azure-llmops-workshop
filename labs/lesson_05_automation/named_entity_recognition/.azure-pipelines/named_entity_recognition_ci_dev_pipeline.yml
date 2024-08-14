@@ -24,7 +24,7 @@ parameters:
    default: "dev"
  - name: use_case_base_path
    displayName: "flow to execute"
-   default: "named_entity_recognition"
+   default: "./labs/lesson_05_automation/named_entity_recognition"
  - name: deployment_type
    displayName: "Determine type of deployment - aml, aks, docker, webapp"
    default: "webapp"

@@ -22,9 +22,9 @@ from azure.ai.ml.entities import Data as AMLData
 from azure.ai.ml.constants import AssetTypes as AMLAssetTypes
 from azure.identity import DefaultAzureCredential
 
-from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
-from llmops.common.logger import llmops_logger
+from labs.lesson_05_automation.llmops.common.experiment_cloud_config import ExperimentCloudConfig
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.logger import llmops_logger
 
 
 logger = llmops_logger("register_data_asset")

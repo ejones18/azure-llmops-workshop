@@ -1,9 +1,9 @@
 
 """Create connections for local run."""
 
-from llmops.common.common import resolve_flow_type
+from labs.lesson_05_automation.llmops.common.common import resolve_flow_type
 # from llmops.common.experiment_cloud_config import ExperimentCloudConfig
-from llmops.common.experiment import load_experiment
+from labs.lesson_05_automation.llmops.common.experiment import load_experiment
 from promptflow.entities import (
     AzureOpenAIConnection,
     OpenAIConnection,

@@ -23,7 +23,7 @@ parameters:
    default: "pr"
  - name: use_case_base_path
    displayName: "Base path of flow to execute"
-   default: "named_entity_recognition"
+   default: "./labs/lesson_05_automation/named_entity_recognition"
 
 #=====================================
 # Execute platform_pr_dev_pipeline pipeline for experiment, evaluation and deployment of flows
